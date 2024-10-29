@@ -1,6 +1,6 @@
 const gulp = require('gulp')
 const ts = require('gulp-typescript');
-const project = ts.createProject('./src/tsconfig.json')
+const project = ts.createProject('./tsconfig.json')
 
 
 gulp.task('compile', () => {

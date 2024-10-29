@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "strictNullChecks": true
   },
+  "files": ["./gulpfile.ts"],
   "exclude": [
     "node_modules"
   ]
