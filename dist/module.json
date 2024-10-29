@@ -9,7 +9,7 @@
       "discord": "jeff#8473"
     }
   ],
-  "version": "0.0.4",
+  "version": "0.0.5",
   "compatibility": {
       "minimum": 10,
       "verified": "11",
@@ -41,6 +41,9 @@
       "type": "screenshot",
       "location": ""
     }
+  ],
+  "scripts": [
+    "scripts/star-map.js"
   ],
   "esmodules": [
     "scripts/star-map.js"
