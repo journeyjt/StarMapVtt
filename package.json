@@ -1,8 +1,9 @@
 {
-  "name": "foundry-typescript-template",
-  "version": "1.0.0",
-  "description": "Foundry VTT Typescript Template",
-  "main": "index.js",
+  "name": "star-map",
+  "version": "0.0.7",
+  "description": "Foundry VTT Module for Star Map",
+  "main": "src/scripts/index.ts",
+  "type": "module",
   "scripts": {
     "build": "gulp build"
   },
