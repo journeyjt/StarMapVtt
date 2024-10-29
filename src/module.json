@@ -43,10 +43,10 @@
     }
   ],
   "scripts": [
-    "scripts/**/*.js"
+    "scripts/**"
   ],
   "esmodules": [
-    "scripts/**/*.js"
+    "scripts/**"
   ],
   "styles": [
     "styles/module.css"
