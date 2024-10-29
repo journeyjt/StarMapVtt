@@ -67,12 +67,12 @@ jobs:
     # Create a release for this specific version
     - name: Create Version Release
       id: create_version_release
-      uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@v1.14.0
       with:
         allowUpdates: true # set this to false if you want to prevent updating existing releases
         name: Release ${{ steps.get-version.outputs.version }}
         draft: false
         prerelease: false
-        token: ${{ secrets.ACTIONS_TOKEN }}
+        token: ${{ ACTIONS_TOKEN }}
         artifacts: './dist/module.json,./module.zip'
         tag: ${{ steps.get-version.outputs.version }}
