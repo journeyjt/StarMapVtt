@@ -1,4 +1,5 @@
 {
+  "id": "star-map",
   "name": "star-map",
   "title": "Star Map",
   "description": "A module for creating and displaying star maps.", 
