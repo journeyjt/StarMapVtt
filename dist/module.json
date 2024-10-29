@@ -43,10 +43,12 @@
     }
   ],
   "scripts": [
-    "scripts/**"
+    "scripts/star-map.js",
+    "scripts/sector.js"
   ],
   "esmodules": [
-    "scripts/**"
+    "scripts/star-map.js",
+    "scripts/sector.js"
   ],
   "styles": [
     "styles/module.css"
