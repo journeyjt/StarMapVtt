@@ -1,4 +1,4 @@
-import { Sector } from "./sector";
+import { Sector } from "./sector.js";
 
 export class StarMap {
   private sector: Sector;
