@@ -1,4 +1,4 @@
-import { Sector } from "./sector";
+import { Sector } from "./sector.js";
 export class StarMap {
     constructor() {
         this.sector = new Sector("Default Sector", "This is the default sector.");
