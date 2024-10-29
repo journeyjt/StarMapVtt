@@ -73,6 +73,6 @@ jobs:
         name: Release ${{ steps.get-version.outputs.version }}
         draft: false
         prerelease: false
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.ACTIONS_TOKEN }}
         artifacts: './dist/module.json,./module.zip'
         tag: ${{ steps.get-version.outputs.version }}
