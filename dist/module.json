@@ -1,16 +1,17 @@
 {
-  "name": "foundry-typescript-template",
-  "title": "Typescript Template",
-  "description": "", 
+  "name": "star-map",
+  "title": "Star Map",
+  "description": "A module for creating and displaying star maps.", 
   "authors": [
     {
-      "name": "spacemandev",
-      "discord": "spacemandev#6256"
+      "name": "sojourner",
+      "discord": "jeff#8473"
     }
   ],
   "version": "0.0.1",
-  "minimumCoreVersion": "0.6.0",
-  "compatibleCoreVersion": "0.7.2",
+  "minimumCoreVersion": "0.7.9",
+  "compatibleCoreVersion": "0.7.9",
+  "manifestPlusVersion": "1.0.0",
   "url": "",
   "manifest": "",
   "download": "",
