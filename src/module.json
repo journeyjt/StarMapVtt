@@ -44,11 +44,13 @@
   ],
   "scripts": [
     "scripts/star-map.js",
-    "scripts/sector.js"
+    "scripts/sector.js",
+    "scripts/index.js"
   ],
   "esmodules": [
     "scripts/star-map.js",
-    "scripts/sector.js"
+    "scripts/sector.js",
+    "scripts/index.js"
   ],
   "styles": [
     "styles/module.css"
