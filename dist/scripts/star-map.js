@@ -1,4 +1,3 @@
-import "@league-of-foundry-developers/foundry-vtt-types";
 export function initStarMap() {
     console.log("StarMap initialized");
     Hooks.once("init", function () {
