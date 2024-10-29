@@ -3,7 +3,6 @@
   "version": "0.0.7",
   "description": "Foundry VTT Module for Star Map",
   "main": "src/scripts/index.ts",
-  "type": "module",
   "scripts": {
     "build": "gulp build"
   },
