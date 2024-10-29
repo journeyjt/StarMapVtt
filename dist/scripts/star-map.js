@@ -23,10 +23,10 @@ export class StarMap {
         // "This code runs once core initialization is ready and game data is available."
         Hooks.on("ready", function () {
             console.log("This code runs once core initialization is ready and game data is available.");
+            const starMap = new StarMap(); // Create an instance of StarMap
+            starMap.initStarMap(); // Call the function to initialize the StarMap
+            starMap.displaySectorInfo(); // Display the sector information
+            console.log("StarMap initialized");
         });
-        console.log("StarMap initialized");
     }
 }
-const starMap = new StarMap(); // Create an instance of StarMap
-starMap.initStarMap(); // Call the function to initialize the StarMap
-starMap.displaySectorInfo(); // Display the sector information
