@@ -58,7 +58,7 @@ export class StarMap {
       console.log("Parsed HTML | ", html);
       let hud = document.querySelector("#hud");
       console.log("drawing-hud | ", hud);
-      let starMapContainer = html.documentElement.getElementsByClassName(".module-star-map-application")[0];
+      let starMapContainer = html.documentElement.getElementsByClassName("module-star-map-application")[0];
       console.log("Star Map Container | ", starMapContainer);
       hud?.insertAdjacentElement("beforeend", starMapContainer);
     }
