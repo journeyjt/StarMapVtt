@@ -27,14 +27,25 @@ export class StarMap {
       return;
     }
     else{
+
       console.log("StarMap scene not found.");
+
       scene = await getDocumentClass("Scene").create({
         name: "StarMap",
-        width: 800,
-        height: 600,
-        grid: 1,
-        gridColor: "#000000",
-        backgroundColor: "#FFFFFF",
+        width: 1920,
+        height: 1080,
+        grid: 150,
+        gridColor: "#FFFFFF",
+        backgroundColor: "#000000",
+        fogExploration: false,
+        globalLight: true,
+        darkness: 0,
+        gridDistance: 1,
+        gridUnits: "AU",
+        gridType: CONST.GRID_TYPES.HEXODDR,
+        padding: 0,
+        navName: "Star Map",
+        tokenVision: true,
         navigation: true,
         active: false,
         permission: { default: 0 },
