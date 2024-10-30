@@ -20,7 +20,6 @@ export class StarMap {
   }
 
   async initStarMap(app, html, _) {
-    this.displaySectorInfo();  // Display the sector information
     let scene = game.scenes.find(scene => scene.name === "StarMap");
     if (scene) {
       console.log("StarMap scene found.");
