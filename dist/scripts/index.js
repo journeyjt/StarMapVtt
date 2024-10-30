@@ -12,7 +12,7 @@ const starMap = new StarMap();
 Hooks.once('init', function () {
     return __awaiter(this, void 0, void 0, function* () {
         CONFIG.debug.hooks = true;
-        Hooks.on("drawLayer", starMap.initStarMap);
+        Hooks.on("canvasReady", starMap.initStarMap);
         console.log("Star Map | Ready");
     });
 });
