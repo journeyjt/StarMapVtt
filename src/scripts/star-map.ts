@@ -54,7 +54,7 @@ export class StarMap {
       
       let content = await renderTemplate("modules/star-map/templates/star-map.html", {});
       console.log("Loaded Content | ", content);
-      let hud = html.find("#hud");
+      let hud = html.hud.element.find("#hud");
       console.log("HUD | ", hud);
       hud.append(content);
     }
