@@ -21,7 +21,7 @@ export class StarMap {
     displaySectorInfo() {
         console.log(this.sector.getInfo());
     }
-    initStarMap() {
+    initStarMap(app, html, _) {
         return __awaiter(this, void 0, void 0, function* () {
             this.displaySectorInfo(); // Display the sector information
             let scene = game.scenes.find(scene => scene.name === "StarMap");
@@ -52,7 +52,10 @@ export class StarMap {
                     permission: { default: 0 },
                 });
                 let content = yield renderTemplate("modules/star-map/templates/star-map.html", {});
-                scene.update({ template: content });
+                console.log("Loaded Content | ", content);
+                let hud = html.find("#hud");
+                console.log("HUD | ", hud);
+                hud.append(content);
             }
         });
     }

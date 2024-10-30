@@ -9,9 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { StarMap } from "./star-map.js";
 const starMap = new StarMap();
-Hooks.once("ready", function () {
+Hooks.once('ready', function () {
     return __awaiter(this, void 0, void 0, function* () {
-        yield starMap.initStarMap(); // Call the function to initialize the StarMap
-        console.log("StarMap initialized");
+        Hooks.on("canvasReady", starMap.initStarMap);
+        console.log("Star Map | Ready");
     });
 });

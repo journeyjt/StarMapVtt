@@ -19,7 +19,7 @@ export class StarMap {
     console.log(this.sector.getInfo());
   }
 
-  async initStarMap() {
+  async initStarMap(app, html, _) {
     this.displaySectorInfo();  // Display the sector information
     let scene = game.scenes.find(scene => scene.name === "StarMap");
     if (scene) {
@@ -50,8 +50,12 @@ export class StarMap {
         active: false,
         permission: { default: 0 },
       });
+      
       let content = await renderTemplate("modules/star-map/templates/star-map.html", {});
-      scene.update({ template: content });
+      console.log("Loaded Content | ", content);
+      let hud = html.find("#hud");
+      console.log("HUD | ", hud);
+      hud.append(content);
     }
   }
 
