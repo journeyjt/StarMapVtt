@@ -54,9 +54,9 @@ export class StarMap {
                 });
                 let content = yield renderTemplate("modules/star-map/templates/star-map.html", {});
                 console.log("Loaded Content | ", content);
-                let hud = html.hud.element.find("#hud");
+                let hud = document.querySelector("#hud");
                 console.log("HUD | ", hud);
-                hud.append(content);
+                hud === null || hud === void 0 ? void 0 : hud.after(content);
             }
         });
     }
