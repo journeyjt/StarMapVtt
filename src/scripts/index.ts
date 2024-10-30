@@ -6,7 +6,7 @@ Hooks.once('init', async function () {
     
     CONFIG.debug.hooks = true;
 
-    Hooks.on("drawLayer", starMap.initStarMap);
+    Hooks.on("canvasReady", starMap.initStarMap);
     console.log("Star Map | Ready");
 
   });
