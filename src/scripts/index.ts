@@ -2,8 +2,7 @@ import { StarMap } from "./star-map.js";
 
 const starMap = new StarMap();
 
-Hooks.once("ready", function() {
-    starMap.initStarMap();  // Call the function to initialize the StarMap
-    starMap.displaySectorInfo();  // Display the sector information
+Hooks.once("ready", async function() {
+    await starMap.initStarMap();  // Call the function to initialize the StarMap
     console.log("StarMap initialized");
 });
