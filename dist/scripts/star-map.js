@@ -51,9 +51,8 @@ export class StarMap {
                     active: false,
                     permission: { default: 0 },
                 });
-                let hud = html.find("#drawing-hud");
                 let content = yield renderTemplate("modules/star-map/templates/star-map.html", {});
-                hud.append(content);
+                scene.update({ template: content });
             }
         });
     }

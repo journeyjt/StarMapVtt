@@ -55,6 +55,9 @@
   "styles": [
     "styles/module.css"
   ],
+  "templates": [
+    "star-map.html"
+  ],
   "languages": [
     {
       "lang": "en",
