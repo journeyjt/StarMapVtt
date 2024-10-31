@@ -28,9 +28,9 @@ export default class Sector {
             const content = yield renderTemplate("modules/star-map/templates/star-map.html", {});
             const target = html.find("#chat-bubbles");
             target.before(content);
-            for (const solarSystem of this.solarSystems) {
+            this.solarSystems.forEach((solarSystem) => __awaiter(this, void 0, void 0, function* () {
                 yield solarSystem.renderTemplate(html);
-            }
+            }));
         });
     }
 }
