@@ -12,9 +12,9 @@ export default class SolarSystem {
     async renderTemplate(html){
         console.log("Rendering Solar System | ", this.name);
         let content = await renderTemplate("modules/star-map/templates/star-map.html", {});
-        content.replace("||solarSystemName||", this.name);
-        console.log("Content | ", content);
+        const parsedContent = content.replace("||solarSystemName||", this.name);
+        console.log("Content | ", parsedContent);
         let target = html.find("#chat-bubbles");
-        target.before(content);
+        target.before(parsedContent);
     }
   }
