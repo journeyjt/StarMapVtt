@@ -7,6 +7,10 @@
     width: 150px;
     height: 150px;
     border: solid 1px #cf3922;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Horizontally center children */
+    align-items: center; 
 }
 
 .module-star-map-system-name{
