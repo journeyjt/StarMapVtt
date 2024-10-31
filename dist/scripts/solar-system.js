@@ -18,10 +18,10 @@ export default class SolarSystem {
         return __awaiter(this, void 0, void 0, function* () {
             console.log("Rendering Solar System | ", this.name);
             let content = yield renderTemplate("modules/star-map/templates/star-map.html", {});
-            content.replace("||solarSystemName||", this.name);
-            console.log("Content | ", content);
+            const parsedContent = content.replace("||solarSystemName||", this.name);
+            console.log("Content | ", parsedContent);
             let target = html.find("#chat-bubbles");
-            target.before(content);
+            target.before(parsedContent);
         });
     }
 }
