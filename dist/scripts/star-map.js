@@ -27,12 +27,8 @@ export class StarMap {
             console.log("Canvas | ", canvas);
             console.log("Scene | ", canvas.scene);
             let scene = game.scenes.find(scene => scene.name === "StarMap");
-            if (scene) {
-                console.log("StarMap scene found.");
-                return;
-            }
-            else {
-                console.log("StarMap scene not found.");
+            if (!scene) {
+                console.log("Creating StarMap scene");
                 scene = yield getDocumentClass("Scene").create({
                     name: "StarMap",
                     width: 1920,
@@ -54,6 +50,7 @@ export class StarMap {
                     permission: { default: 0 },
                 });
             }
+            console.log("StarMap scene found.");
             if (canvas.scene.name === "StarMap") {
                 let app = document.getElementsByClassName("module-star-map-application")[0];
                 console.log("Star Map App | ", app);
