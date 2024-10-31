@@ -25,7 +25,7 @@ export default class SolarSystem {
             //console.log("Content | ", parsedContent);
             let target = html.find("#star-map");
             target.append(parsedContent);
-            const solarSystem = html.find(`#${this.name}`);
+            const solarSystem = html.find(`#${this.id}`);
             solarSystem.click(() => {
                 console.log(`Clicked on ${this.name} x: ${this.xCoordinate} y: ${this.yCoordinate}`);
             });
