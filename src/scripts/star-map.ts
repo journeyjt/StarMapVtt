@@ -5,7 +5,7 @@ export class StarMap {
   private sector: Sector;
 
   constructor() {
-    let solarSystems = [new SolarSystem("Solar System 1")];
+    let solarSystems = [new SolarSystem("Solar System 1", 100, 100), new SolarSystem("Solar System 2", 400, 400)];
     this.sector = new Sector("Default Sector", "This is the default sector.", solarSystems);
   }
 

@@ -8,8 +8,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 export default class SolarSystem {
-    constructor(name) {
+    constructor(name, xCoordinate, yCoordinate) {
         this.name = name;
+        this.xCoordinate = xCoordinate;
+        this.yCoordinate = yCoordinate;
     }
     getName() {
         return this.name;
@@ -22,6 +24,12 @@ export default class SolarSystem {
             //console.log("Content | ", parsedContent);
             let target = html.find("#chat-bubbles");
             target.before(parsedContent);
+            const solarSystem = html.find(`#${this.name}`);
+            solarSystem.click(() => {
+                console.log(`Clicked on ${this.name} x: ${this.xCoordinate} y: ${this.yCoordinate}`);
+                solarSystem.style.Left = this.xCoordinate;
+                solarSystem.style.Top = this.yCoordinate;
+            });
         });
     }
 }
