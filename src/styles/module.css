@@ -68,14 +68,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -119px 0 0 -120px;
-    width: 230px;
-    height: 230px;
+    margin: -35 0 0 -35px;
+    width: 100px;
+    height: 100px;
     border: 1px solid #474747;
     border-radius: 50%;
-    -webkit-animation: spin 5s linear infinite reverse;
-    -moz-animation: spin 5s linear infinite reverse;
-    animation: spin 5s linear infinite reverse;  
+    -webkit-animation: spin 7s linear infinite reverse;
+    -moz-animation: spin 7s linear infinite reverse;
+    animation: spin 7s linear infinite reverse;  
     
 }
 .ven-orbit:hover{
@@ -84,8 +84,8 @@
 
 /***Earth***/
 .earth {
-	width: 18px;
-	height: 18px; 
+	width: 10px;
+	height: 10px; 
     background:#11abe8;
     position: absolute;
     top: 31%;
@@ -95,13 +95,13 @@
     top: 50%;
     left: 50%;
     margin: -169px 0 0 -170px;
-    width: 330px;
-    height: 330px;
+    width: 135px;
+    height: 135px;
     border: 1px solid #474747;
     border-radius: 50%;
-    -webkit-animation: spin 9s linear infinite reverse;
-    -moz-animation: spin 9s linear infinite reverse;
-    animation: spin 9s linear infinite reverse;
+    -webkit-animation: spin 8s linear infinite reverse;
+    -moz-animation: spin 8s linear infinite reverse;
+    animation: spin 8s linear infinite reverse;
     
 }
 .ear-orbit:hover{
@@ -276,8 +276,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -50px;
-  margin-left: -50px;
 }
 
 
