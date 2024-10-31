@@ -16,7 +16,7 @@ export default class SolarSystem {
     async renderTemplate(html){
         console.log("Rendering Solar System | ", this.name);
         let content = await renderTemplate("modules/star-map/templates/star-map.html", {});
-        const parsedContent = content.replace("||solarSystemName||", this.name);
+        const parsedContent = content.replace("/||solarSystemName||/g", this.name);
         //console.log("Content | ", parsedContent);
         let target = html.find("#chat-bubbles");
         target.before(parsedContent);

@@ -20,7 +20,7 @@ export default class SolarSystem {
         return __awaiter(this, void 0, void 0, function* () {
             console.log("Rendering Solar System | ", this.name);
             let content = yield renderTemplate("modules/star-map/templates/star-map.html", {});
-            const parsedContent = content.replace("||solarSystemName||", this.name);
+            const parsedContent = content.replace("/||solarSystemName||/g", this.name);
             //console.log("Content | ", parsedContent);
             let target = html.find("#chat-bubbles");
             target.before(parsedContent);
