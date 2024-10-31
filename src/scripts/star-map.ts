@@ -22,6 +22,8 @@ export class StarMap {
   async initStarMap(canvas) {
     console.log("Initializing Star Map...");
     console.log("Canvas | ", canvas);
+    console.log("Scene | ", canvas.scene);
+    
     let scene = game.scenes.find(scene => scene.name === "StarMap");
     if (scene) {
       console.log("StarMap scene found.");
@@ -52,6 +54,10 @@ export class StarMap {
         permission: { default: 0 },
       });
       
+    }
+
+    let system = document.querySelector(".module-star-map-application");
+    if(!system && canvas.scene.name === "StarMap") {
       let content = await renderTemplate("modules/star-map/templates/star-map.html", {});
       console.log("Loaded Content | ", content);
       const html = new DOMParser().parseFromString(content, "text/html");
@@ -62,6 +68,8 @@ export class StarMap {
       console.log("Star Map Container | ", starMapContainer);
       hud?.insertAdjacentElement("beforeend", starMapContainer);
     }
+
+
   }
 
 }

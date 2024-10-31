@@ -3,21 +3,6 @@
     height: 100%;
 }
 
-body{
-    background: #101110;
-}
-/*Font styles*/
-.font-style {
-    width: 35%;
-    color: #fff;
-    margin-top: 5%;
-    
-}
-.font-style .head {
-    font-family: Helvetica, sans-serif;
-    font-size: 2em;
-}
-
 /*Planet Orb*/
 .rcrcl {
     border-radius: 50%;
@@ -25,8 +10,8 @@ body{
 
 /*Sun*/
 .sun {
-	width: 90px;
-	height: 90px; 
+	width: 25px;
+	height: 25px; 
     background: #e06318;
     background:-webkit-radial-gradient(top, #f9b701 0%, #eaa802 27%, #ea9319 64%, #e06318 100%);
     background:-moz-radial-gradient(top, #f9b701 0%, #eaa802 27%, #ea9319 64%, #e06318 100%);
@@ -50,7 +35,6 @@ body{
 	width: 10px;
 	height: 10px; 
     background: #9f5e27;
-    top: 27%;
     position: absolute;
     
 }
@@ -58,14 +42,14 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -79px 0 0 -80px;
-    width: 150px;
-    height: 150px;
+    margin: -11px 0 0 -11px;
+    width: 50px;
+    height: 50px;
     border: 1px solid #474747;
     border-radius: 50%;
-    -webkit-animation: spin 2s linear infinite reverse;
-    -moz-animation: spin 2s linear infinite reverse;
-    animation: spin 2s linear infinite reverse;
+    -webkit-animation: spin 10s linear infinite reverse;
+    -moz-animation: spin 10s linear infinite reverse;
+    animation: spin 10s linear infinite reverse;
     
 }
 .mer-orbit:hover{
@@ -78,7 +62,7 @@ body{
 	height: 15px; 
     background:#BEB769;
     position: absolute;
-    top: 29%;
+    top: 16%;
 }
 .ven-orbit {
     position: absolute;
