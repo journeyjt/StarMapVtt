@@ -3,15 +3,24 @@
     height: 100%;
 }
 
+.module-star-map-grid-anchor{
+    position: absolute;
+    left: 556px;
+    top: 999px;
+}
+
 .module-star-map-solar-system-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
 }
 
 .module-star-map-solar-system {
+    width: 120px;
+    height: 120px;
     border: solid 1px #cf3922;
     position: relative;
     display: flex;
@@ -34,6 +43,8 @@
 }
 
 .module-star-map-star {
+    position: absolute;
+
 	width: 25px;
 	height: 25px; 
     background: #e06318;
@@ -60,13 +71,13 @@
 	height: 10px; 
     background: #9f5e27;
     position: absolute;
-    
+    top: 10%
 }
 .module-star-map-orbit-0 {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -11px 0 0 -11px;
+    /* top: 50%;
+    left: 50%; */
+    /* margin: -11px 0 0 -11px; */
     width: 50px;
     height: 50px;
     border: 1px solid #474747;
@@ -90,9 +101,9 @@
 }
 .module-star-map-orbit-1 {
     position: absolute;
-    top: 50%;
+    /* top: 50%;
     left: 50%;
-    margin: -35px 0 0 -35px;
+    margin: -35px 0 0 -35px; */
     width: 100px;
     height: 100px;
     border: 1px solid #474747;
@@ -112,13 +123,13 @@
 	height: 10px; 
     background:#11abe8;
     position: absolute;
-    top: 31%;
+    top: 27%;
 }
 .module-star-map-orbit-2 {
     position: absolute;
-    top: 50%;
+    /* top: 50%;
     left: 50%;
-    margin: -51px 0 0 -51px;
+    margin: -51px 0 0 -51px; */
     width: 135px;
     height: 135px;
     border: 1px solid #474747;
@@ -295,12 +306,12 @@
 
 
 /*Positioning*/
-
+/* 
 .module-star-map-centered {
   position: absolute;
   top: 50%;
   left: 50%;
-}
+} */
 
 
 /*Animations*/
