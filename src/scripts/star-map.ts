@@ -53,23 +53,15 @@ export class StarMap {
     console.log("StarMap scene found.");
 
     if(canvas.scene.name === "StarMap") {
-
-      let app = document.getElementsByClassName("module-star-map-application")[0];
-      console.log("Star Map App | ", app);
-      
-      if(!app){
-        let content = await renderTemplate("modules/star-map/templates/star-map.html", {});
-        console.log("Loaded Content | ", content);
-        const html = new DOMParser().parseFromString(content, "text/html");
-        console.log("Parsed HTML | ", html);
-        app = html.documentElement.getElementsByClassName("module-star-map-application")[0];
-      }
-
+      let content = await renderTemplate("modules/star-map/templates/star-map.html", {});
+      console.log("Loaded Content | ", content);
+      const html = new DOMParser().parseFromString(content, "text/html");
+      console.log("Parsed HTML | ", html);
+      const app = html.documentElement.getElementsByClassName("module-star-map-application")[0];
       let hud = document.querySelector("#hud");
       console.log("drawing-hud | ", hud);
       console.log("Star Map Container | ", app);
       hud?.insertAdjacentElement("beforeend", app);
-
     }
   }
 }
