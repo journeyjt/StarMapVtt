@@ -3,9 +3,15 @@
     height: 100%;
 }
 
-.module-star-map-solar-system {
+.module-star-map-solar-system-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 150px;
     height: 150px;
+}
+
+.module-star-map-solar-system {
     border: solid 1px #cf3922;
     position: relative;
     display: flex;
@@ -14,6 +20,7 @@
 }
 
 .module-star-map-system-name{
+    align-self: flex-start;
     font-size: 20px;
     color: #fff;
     text-align: center;
