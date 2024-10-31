@@ -24,7 +24,6 @@ export default class Sector {
 
   async renderTemplate(html) {
     for (const solarSystem of this.solarSystems) {
-      console.log("Solar System Name: ", solarSystem.getName());
       await solarSystem.renderTemplate(html);
     }
   }

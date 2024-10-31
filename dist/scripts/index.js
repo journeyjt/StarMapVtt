@@ -12,12 +12,10 @@ const starMap = new StarMap();
 //game.STAR_MAP = starMap;
 Hooks.once('init', function () {
     return __awaiter(this, void 0, void 0, function* () {
-        CONFIG.debug.hooks = true;
+        //CONFIG.debug.hooks = true;
         Hooks.on("canvasReady", starMap.initStarMap);
         console.log("Star Map | Ready");
         Hooks.on("renderApplication", (app, html, data) => __awaiter(this, void 0, void 0, function* () {
-            console.log("Rendering Application | ", game.canvas);
-            console.log("Current Scene | ", game.canvas.scene.name);
             if (game.canvas.scene.name === "StarMap") {
                 yield starMap.renderStarMap(app, html, data);
             }
