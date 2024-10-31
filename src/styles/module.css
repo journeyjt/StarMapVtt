@@ -9,10 +9,12 @@
 }
 
 .module-star-map-system-name{
+    position: fixed;
     font-size: 20px;
     color: #fff;
     text-align: center;
     margin-top: 10px;
+    z-index: 2;
 }
 
 /*Planet Orb*/
