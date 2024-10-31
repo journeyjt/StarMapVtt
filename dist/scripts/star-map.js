@@ -54,18 +54,20 @@ export class StarMap {
                     permission: { default: 0 },
                 });
             }
-            let app = document.getElementsByClassName("module-star-map-application")[0];
-            console.log("Star Map App | ", app);
-            if (!app && canvas.scene.name === "StarMap") {
-                let content = yield renderTemplate("modules/star-map/templates/star-map.html", {});
-                console.log("Loaded Content | ", content);
-                const html = new DOMParser().parseFromString(content, "text/html");
-                console.log("Parsed HTML | ", html);
-                let hud = document.querySelector("#hud");
-                console.log("drawing-hud | ", hud);
-                let starMapContainer = html.documentElement.getElementsByClassName("module-star-map-application")[0];
-                console.log("Star Map Container | ", starMapContainer);
-                hud === null || hud === void 0 ? void 0 : hud.insertAdjacentElement("beforeend", starMapContainer);
+            if (canvas.scene.name === "StarMap") {
+                let app = document.getElementsByClassName("module-star-map-application")[0];
+                console.log("Star Map App | ", app);
+                if (!app) {
+                    let content = yield renderTemplate("modules/star-map/templates/star-map.html", {});
+                    console.log("Loaded Content | ", content);
+                    const html = new DOMParser().parseFromString(content, "text/html");
+                    console.log("Parsed HTML | ", html);
+                    let hud = document.querySelector("#hud");
+                    console.log("drawing-hud | ", hud);
+                    let starMapContainer = html.documentElement.getElementsByClassName("module-star-map-application")[0];
+                    console.log("Star Map Container | ", starMapContainer);
+                    hud === null || hud === void 0 ? void 0 : hud.insertAdjacentElement("beforeend", starMapContainer);
+                }
             }
         });
     }
