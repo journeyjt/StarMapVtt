@@ -10,11 +10,9 @@ Hooks.once('init', async function () {
     console.log("Star Map | Ready");
 
     Hooks.on("renderApplication", async (app, html, data) => {
-      console.log("Rendering Application | ", app);
-      console.log("Rendering HTML | ", html);
-      console.log("Rendering Data | ", data);
-       
-      if(app.canvas.scene.name === "StarMap"){
+      console.log("Rendering Application | ", game.canvas);
+      
+      if(game.canvas.scene.name === "StarMap"){
         await starMap.renderStarMap(app, html, data);
       } 
     });
