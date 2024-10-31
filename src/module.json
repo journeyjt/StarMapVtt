@@ -45,12 +45,14 @@
   "scripts": [
     "scripts/star-map.js",
     "scripts/sector.js",
-    "scripts/index.js"
+    "scripts/index.js",
+    "scripts/solar-system.js"
   ],
   "esmodules": [
     "scripts/star-map.js",
     "scripts/sector.js",
-    "scripts/index.js"
+    "scripts/index.js",
+    "scripts/solar-system.js"
   ],
   "styles": [
     "styles/module.css"

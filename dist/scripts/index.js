@@ -16,6 +16,7 @@ Hooks.once('init', function () {
         console.log("Star Map | Ready");
         Hooks.on("renderApplication", (app, html, data) => __awaiter(this, void 0, void 0, function* () {
             console.log("Rendering Application | ", game.canvas);
+            console.log("Current Scene | ", game.canvas.scene.name);
             if (game.canvas.scene.name === "StarMap") {
                 yield starMap.renderStarMap(app, html, data);
             }

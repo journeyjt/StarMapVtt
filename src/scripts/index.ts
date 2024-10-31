@@ -11,6 +11,7 @@ Hooks.once('init', async function () {
 
     Hooks.on("renderApplication", async (app, html, data) => {
       console.log("Rendering Application | ", game.canvas);
+      console.log("Current Scene | ", game.canvas.scene.name);
       
       if(game.canvas.scene.name === "StarMap"){
         await starMap.renderStarMap(app, html, data);
