@@ -14,5 +14,13 @@ Hooks.once('init', function () {
         CONFIG.debug.hooks = true;
         Hooks.on("canvasReady", starMap.initStarMap);
         console.log("Star Map | Ready");
+        Hooks.on("renderApplication", (app, html, data) => __awaiter(this, void 0, void 0, function* () {
+            console.log("Rendering Application | ", app);
+            console.log("Rendering HTML | ", html);
+            console.log("Rendering Data | ", data);
+            if (app.canvas.scene.name === "StarMap") {
+                yield starMap.renderStarMap(app, html, data);
+            }
+        }));
     });
 });
