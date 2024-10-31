@@ -1,10 +1,12 @@
 import Sector from "./sector.js";
+import SolarSystem from "./solar-system.js";
 
 export class StarMap {
   private sector: Sector;
 
   constructor() {
-    this.sector = new Sector("Default Sector", "This is the default sector.");
+    let solarSystems = [new SolarSystem("Solar System 1")];
+    this.sector = new Sector("Default Sector", "This is the default sector.", solarSystems);
   }
 
   addSector(sector: Sector) {
@@ -66,15 +68,8 @@ export class StarMap {
   }
 
   async renderStarMap(app, html, data) {
-    let content = await renderTemplate("modules/star-map/templates/star-map.html", {});
-    console.log("Loaded Content | ", content);
-    const template = new DOMParser().parseFromString(content, "text/html");
-    console.log("Parsed HTML | ", template);
-    const starApp = template.documentElement.getElementsByClassName("module-star-map-application")[0];
-    let hud = html.querySelector("#hud");
-    console.log("drawing-hud | ", hud);
-    console.log("Star Map Container | ", starApp);
-    hud?.insertAdjacentElement("beforeend", starApp);
+    console.log("Rendering Star Map...");
+    await this.sector.renderTemplate(html);
   }
 }
 

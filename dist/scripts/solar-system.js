@@ -7,21 +7,24 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-export default class Sector {
-    constructor(name, description, solarSystems = []) {
+export default class SolarSystem {
+    constructor(name) {
         this.name = name;
-        this.description = description;
-        this.solarSystems = solarSystems;
     }
-    getInfo() {
-        return `${this.name}: ${this.description}`;
+    getName() {
+        return this.name;
     }
     renderTemplate(html) {
         return __awaiter(this, void 0, void 0, function* () {
-            for (const solarSystem of this.solarSystems) {
-                console.log("Solar System Name: ", solarSystem.getName());
-                yield solarSystem.renderTemplate(html);
-            }
+            let content = yield renderTemplate("modules/star-map/templates/star-map.html", {});
+            console.log("Loaded Content | ", content);
+            const template = new DOMParser().parseFromString(content, "text/html");
+            console.log("Parsed HTML | ", template);
+            const starApp = template.documentElement.getElementsByClassName("module-star-map-application")[0];
+            let hud = html.querySelector("#hud");
+            console.log("drawing-hud | ", hud);
+            console.log("Star Map Container | ", starApp);
+            hud === null || hud === void 0 ? void 0 : hud.insertAdjacentElement("beforeend", starApp);
         });
     }
 }

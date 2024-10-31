@@ -8,9 +8,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import Sector from "./sector.js";
+import SolarSystem from "./solar-system.js";
 export class StarMap {
     constructor() {
-        this.sector = new Sector("Default Sector", "This is the default sector.");
+        let solarSystems = [new SolarSystem("Solar System 1")];
+        this.sector = new Sector("Default Sector", "This is the default sector.", solarSystems);
     }
     addSector(sector) {
         this.sector = sector;
@@ -66,15 +68,8 @@ export class StarMap {
     }
     renderStarMap(app, html, data) {
         return __awaiter(this, void 0, void 0, function* () {
-            let content = yield renderTemplate("modules/star-map/templates/star-map.html", {});
-            console.log("Loaded Content | ", content);
-            const template = new DOMParser().parseFromString(content, "text/html");
-            console.log("Parsed HTML | ", template);
-            const starApp = template.documentElement.getElementsByClassName("module-star-map-application")[0];
-            let hud = html.querySelector("#hud");
-            console.log("drawing-hud | ", hud);
-            console.log("Star Map Container | ", starApp);
-            hud === null || hud === void 0 ? void 0 : hud.insertAdjacentElement("beforeend", starApp);
+            console.log("Rendering Star Map...");
+            yield this.sector.renderTemplate(html);
         });
     }
 }
