@@ -17,6 +17,7 @@ export default class SolarSystem {
     renderTemplate(html) {
         return __awaiter(this, void 0, void 0, function* () {
             let content = yield renderTemplate("modules/star-map/templates/star-map.html", {});
+            content.replace("{{solarSystemName}}", this.name);
             console.log("Loaded Content | ", content);
             // const template = new DOMParser().parseFromString(content, "text/html");
             // console.log("Parsed HTML | ", template);
