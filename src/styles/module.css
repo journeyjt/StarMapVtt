@@ -8,12 +8,18 @@
     height: 150px;
 }
 
+.module-star-map-system-name{
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
 /*Planet Orb*/
 .rcrcl {
     border-radius: 50%;
 }
 
-/*Sun*/
 .star {
 	width: 25px;
 	height: 25px; 
@@ -52,9 +58,9 @@
     height: 50px;
     border: 1px solid #474747;
     border-radius: 50%;
-    -webkit-animation: spin 10s linear infinite reverse;
-    -moz-animation: spin 10s linear infinite reverse;
-    animation: spin 10s linear infinite reverse;
+    -webkit-animation: spin 20s linear infinite reverse;
+    -moz-animation: spin 20s linear infinite reverse;
+    animation: spin 20s linear infinite reverse;
     
 }
 .orbit-0:hover{
@@ -78,9 +84,9 @@
     height: 100px;
     border: 1px solid #474747;
     border-radius: 50%;
-    -webkit-animation: spin 7s linear infinite reverse;
-    -moz-animation: spin 7s linear infinite reverse;
-    animation: spin 7s linear infinite reverse;  
+    -webkit-animation: spin 14s linear infinite reverse;
+    -moz-animation: spin 14s linear infinite reverse;
+    animation: spin 14s linear infinite reverse;  
     
 }
 .orbit-1:hover{
@@ -104,9 +110,9 @@
     height: 135px;
     border: 1px solid #474747;
     border-radius: 50%;
-    -webkit-animation: spin 8s linear infinite reverse;
-    -moz-animation: spin 8s linear infinite reverse;
-    animation: spin 8s linear infinite reverse;
+    -webkit-animation: spin 16s linear infinite reverse;
+    -moz-animation: spin 16s linear infinite reverse;
+    animation: spin 16s linear infinite reverse;
     
 }
 .orbit-2:hover{

@@ -16,6 +16,12 @@ export default class Sector {
     getInfo() {
         return `${this.name}: ${this.description}`;
     }
+    getSolarSystems() {
+        return this.solarSystems;
+    }
+    getSolarSystem(name) {
+        return this.solarSystems.find(solarSystem => solarSystem.getName() === name);
+    }
     renderTemplate(html) {
         return __awaiter(this, void 0, void 0, function* () {
             for (const solarSystem of this.solarSystems) {

@@ -1,6 +1,7 @@
 import { StarMap } from "./star-map.js";
 
 const starMap = new StarMap();
+//game.STAR_MAP = starMap;
 
 Hooks.once('init', async function () {
     

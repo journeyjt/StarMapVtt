@@ -20,6 +20,9 @@ export class StarMap {
     getSector() {
         return this.sector;
     }
+    getSolarSystem(name) {
+        return this.sector.getSolarSystems()[0];
+    }
     displaySectorInfo() {
         console.log(this.sector.getInfo());
     }
