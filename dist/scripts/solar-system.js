@@ -20,17 +20,19 @@ export default class SolarSystem {
     renderTemplate(html) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log("Rendering Solar System | ", this.name);
-            let content = yield renderTemplate("modules/star-map/templates/star-map-solar-system.html", {});
+            const content = yield renderTemplate("modules/star-map/templates/star-map-solar-system.html", {});
             const parsedContent = content.replace("||solarSystemName||", this.name).replace("||solarSystemId||", this.id);
             //console.log("Content | ", parsedContent);
-            let target = html.find("#star-map");
+            const target = html.find("#star-map");
             target.append(parsedContent);
-            const solarSystem = html.find(`#${this.id}`);
+            const solarSystem = target.find(`#${this.id}`);
+            console.log("Solar System | ", solarSystem);
             solarSystem.click(() => {
                 console.log(`Clicked on ${this.name} x: ${this.xCoordinate} y: ${this.yCoordinate}`);
             });
-            solarSystem.style.Left = this.xCoordinate;
-            solarSystem.style.Top = this.yCoordinate;
+            solarSystem.style.Left = `${this.xCoordinate}px`;
+            solarSystem.style.Top = `${this.yCoordinate}px`;
+            console.log("Solar System | ", solarSystem);
         });
     }
     generateUUID() {
