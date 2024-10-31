@@ -23,6 +23,10 @@ export default class Sector {
   }
 
   async renderTemplate(html) {
+    console.log("Rendering Sector | ", this.name);
+    const content = await renderTemplate("modules/star-map/templates/star-map.html", {});
+    const target = html.find("#chat-bubbles");
+    target.before(content);
     for (const solarSystem of this.solarSystems) {
       await solarSystem.renderTemplate(html);
     }
