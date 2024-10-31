@@ -21,7 +21,6 @@
 .module-star-map-solar-system {
     width: 120px;
     height: 120px;
-    border: solid 1px #cf3922;
     position: relative;
     display: flex;
     justify-content: center; /* Horizontally center children */
