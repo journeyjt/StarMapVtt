@@ -64,4 +64,17 @@ export class StarMap {
             }
         });
     }
+    renderStarMap(app, html, data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let content = yield renderTemplate("modules/star-map/templates/star-map.html", {});
+            console.log("Loaded Content | ", content);
+            const template = new DOMParser().parseFromString(content, "text/html");
+            console.log("Parsed HTML | ", template);
+            const starApp = template.documentElement.getElementsByClassName("module-star-map-application")[0];
+            let hud = html.querySelector("#hud");
+            console.log("drawing-hud | ", hud);
+            console.log("Star Map Container | ", starApp);
+            hud === null || hud === void 0 ? void 0 : hud.insertAdjacentElement("beforeend", starApp);
+        });
+    }
 }
