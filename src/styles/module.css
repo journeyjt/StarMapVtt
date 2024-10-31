@@ -6,23 +6,23 @@
 .module-star-map-solar-system {
     width: 150px;
     height: 150px;
+    border: solid 1px #cf3922;
 }
 
 .module-star-map-system-name{
-    position: fixed;
     font-size: 20px;
     color: #fff;
     text-align: center;
-    margin-top: 10px;
     z-index: 2;
+    width: 100%;
 }
 
 /*Planet Orb*/
-.rcrcl {
+.module-star-map-rcrcl {
     border-radius: 50%;
 }
 
-.star {
+.module-star-map-star {
 	width: 25px;
 	height: 25px; 
     background: #e06318;
@@ -44,14 +44,14 @@
 }
 
 /***Mercury***/
-.planet-0 {
+.module-star-map-planet-0 {
 	width: 10px;
 	height: 10px; 
     background: #9f5e27;
     position: absolute;
     
 }
-.orbit-0 {
+.module-star-map-orbit-0 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -65,19 +65,19 @@
     animation: spin 20s linear infinite reverse;
     
 }
-.orbit-0:hover{
+.module-star-map-orbit-0:hover{
     border-color: #7A7A7A;
 }
 
 /***Venus***/
-.planet-1 {
+.module-star-map-planet-1 {
 	width: 15px;
 	height: 15px; 
     background:#BEB769;
     position: absolute;
     top: 16%;
 }
-.orbit-1 {
+.module-star-map-orbit-1 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -91,19 +91,19 @@
     animation: spin 14s linear infinite reverse;  
     
 }
-.orbit-1:hover{
+.module-star-map-orbit-1:hover{
     border-color: #7A7A7A;
 }
 
 /***Earth***/
-.planet-2 {
+.module-star-map-planet-2 {
 	width: 10px;
 	height: 10px; 
     background:#11abe8;
     position: absolute;
     top: 31%;
 }
-.orbit-2 {
+.module-star-map-orbit-2 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -117,7 +117,7 @@
     animation: spin 16s linear infinite reverse;
     
 }
-.orbit-2:hover{
+.module-star-map-orbit-2:hover{
     border-color: #7A7A7A;
 }
 
@@ -285,7 +285,7 @@
 
 /*Positioning*/
 
-.centered {
+.module-star-map-centered {
   position: absolute;
   top: 50%;
   left: 50%;

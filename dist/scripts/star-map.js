@@ -29,8 +29,8 @@ export class StarMap {
     initStarMap(canvas) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log("Initializing Star Map...");
-            console.log("Canvas | ", canvas);
-            console.log("Scene | ", canvas.scene);
+            //console.log("Canvas | ", canvas);
+            //console.log("Scene | ", canvas.scene);
             let scene = game.scenes.find(scene => scene.name === "StarMap");
             if (!scene) {
                 console.log("Creating StarMap scene");

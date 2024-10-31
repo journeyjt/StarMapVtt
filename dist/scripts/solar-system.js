@@ -19,7 +19,7 @@ export default class SolarSystem {
             console.log("Rendering Solar System | ", this.name);
             let content = yield renderTemplate("modules/star-map/templates/star-map.html", {});
             const parsedContent = content.replace("||solarSystemName||", this.name);
-            console.log("Content | ", parsedContent);
+            //console.log("Content | ", parsedContent);
             let target = html.find("#chat-bubbles");
             target.before(parsedContent);
         });
