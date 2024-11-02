@@ -1,5 +1,4 @@
 import Planet from "./planet.js";
-import { generateUUID, getRandomNumber, getRandomHexColor } from "./utils.js";
 
 export default class SolarSystem {
     private name: string;
@@ -12,16 +11,16 @@ export default class SolarSystem {
         this.name = name;
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
-        this.id = generateUUID();
+        this.id = window.generateUUID();
         this.generateRandomPlanets();
     }
 
     private generateRandomPlanets() {
-        let numberOfPlanets = getRandomNumber(1, 4);
+        let numberOfPlanets = window.getRandomNumber(1, 4);
         for (let i = 0; i < numberOfPlanets; i++) {
-            let planetSize = getRandomNumber(8, 25);
-            let orbitSize = getRandomNumber(35, 200) +  (i * 10);
-            let planet = new Planet(this.id, `Planet ${i + 1}`, getRandomNumber(10, 20), getRandomHexColor(), planetSize, planetSize, orbitSize, orbitSize);
+            let planetSize = window.getRandomNumber(8, 25);
+            let orbitSize = window.getRandomNumber(35, 200) +  (i * 10);
+            let planet = new Planet(this.id, `Planet ${i + 1}`, window.getRandomNumber(10, 20), window.getRandomHexColor(), planetSize, planetSize, orbitSize, orbitSize);
             this.planets.push(planet);
         }
     }

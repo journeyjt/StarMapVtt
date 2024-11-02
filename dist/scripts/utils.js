@@ -1,4 +1,4 @@
-export function generateUUID() {
+function generateUUID() {
     let d = new Date().getTime(); //Timestamp
     let d2 = (typeof performance !== 'undefined' && performance.now && (performance.now() * 1000)) || 0; //Time in microseconds since page-load or 0 if unsupported
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
@@ -14,10 +14,10 @@ export function generateUUID() {
         return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
 }
-export function getRandomNumber(min, max) {
+function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-export function getRandomHexColor() {
+function getRandomHexColor() {
     let hex = Math.floor(Math.random() * 16777215).toString(16);
     return `#${hex.padStart(6, '0')}`;
 }
