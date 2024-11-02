@@ -57,7 +57,8 @@ class Planet {
             const content = yield renderTemplate("modules/star-map/templates/star-map-planet.html", {});
             const parsedContent = content.replace("||solarSystemOrbitId||", this.id).replace("||solarSystemPlanetId||", this.name);
             console.log("Content | ", parsedContent);
-            const target = html.find(`#${this.systemId}`).find(".module-star-map-solar-system");
+            const target = html.find(`#${this.systemId}`);
+            console.log("Target Solar System | ", target);
             target.append(parsedContent);
             const planet = target.find(`#${this.id}`);
             console.log("Planet | ", planet);
@@ -88,6 +89,7 @@ class SolarSystem {
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
         this.id = generateUUID();
+        this.anchorId = generateUUID();
         this.generateRandomPlanets();
     }
     generateRandomPlanets() {
@@ -107,7 +109,7 @@ class SolarSystem {
         return __awaiter(this, void 0, void 0, function* () {
             console.log("Rendering Solar System | ", this.name);
             const content = yield renderTemplate("modules/star-map/templates/star-map-solar-system.html", {});
-            const parsedContent = content.replace("||solarSystemName||", this.name).replace("||solarSystemId||", this.id);
+            const parsedContent = content.replace("||solarSystemName||", this.name).replace("||solarSystemAnchorId||", this.anchorId).replace("||solarSystemId||", this.id);
             //console.log("Content | ", parsedContent);
             const target = html.find("#star-map");
             target.append(parsedContent);
