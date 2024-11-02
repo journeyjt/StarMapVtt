@@ -1,11 +1,13 @@
 const gulp = require('gulp')
 const ts = require('gulp-typescript');
+const rename = require('gulp-rename');
 const project = ts.createProject('./tsconfig.json')
 
 
 gulp.task('compile', () => {
   return gulp.src('src/**/*.ts')
     .pipe(project())
+    .pipe(rename({ extname: '.mjs' }))
     .pipe(gulp.dest('dist/'))
 })
 
