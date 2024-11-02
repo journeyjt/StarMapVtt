@@ -43,20 +43,14 @@
     }
   ],
   "scripts": [
-    "scripts/star-map.js",
-    "scripts/sector.js",
-    "scripts/index.js",
-    "scripts/solar-system.js",
-    "scripts/planet.js",
-    "scripts/utils.js"
   ],
   "esmodules": [
-    "scripts/star-map.js",
-    "scripts/sector.js",
-    "scripts/index.js",
-    "scripts/solar-system.js",
-    "scripts/planet.js",
-    "scripts/utils.js"
+    "scripts/star-map.mjs",
+    "scripts/sector.mjs",
+    "scripts/index.mjs",
+    "scripts/solar-system.mjs",
+    "scripts/planet.mjs",
+    "scripts/utils.mjs"
   ],
   "styles": [
     "styles/module.css"
