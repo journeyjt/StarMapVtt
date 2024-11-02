@@ -7,8 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import Sector from "./sector.mjs";
-import SolarSystem from "./solar-system.mjs";
+import { Sector } from './sector';
+import { SolarSystem } from './solar-system';
 export class StarMap {
     constructor() {
         let solarSystems = [new SolarSystem("Solar System 1", 100, 100), new SolarSystem("Solar System 2", 400, 400)];

@@ -1,6 +1,6 @@
-import SolarSystem from "./solar-system.mjs";
+import { SolarSystem } from './solar-system'; // Assuming the SolarSystem class is defined in a separate file called 'solarSystem.ts'
 
-export default class Sector {
+export class Sector {
   private name: string;
   private description: string;
   private solarSystems: SolarSystem[];

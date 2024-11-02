@@ -1,6 +1,6 @@
-import { generateUUID } from "./utils.mjs";
+import { generateUUID } from "./utils";
 
-export default class Planet {
+export class Planet {
     private name: string;
     private orbitSpeed: number;
     private color: string;
