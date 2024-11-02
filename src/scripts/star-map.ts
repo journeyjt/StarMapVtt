@@ -6,8 +6,8 @@ export default class StarMap {
   private sector: Sector;
 
   constructor() {
-    let solarSystems = [new SolarSystem("Solar System 1", 100, 100), new SolarSystem("Solar System 2", 400, 400)];
-    this.sector = new Sector("Default Sector", "This is the default sector.", solarSystems);
+    // let solarSystems = [new SolarSystem("Solar System 1", 100, 100), new SolarSystem("Solar System 2", 400, 400)];
+    // this.sector = new Sector("Default Sector", "This is the default sector.", solarSystems);
   }
 
   addSector(sector: Sector) {
@@ -61,8 +61,13 @@ export default class StarMap {
   }
 
   async renderStarMap(app, html, data) {
-    console.log("Rendering Star Map...");
-    await this.sector.renderTemplate(html);
+    if(this.sector){  
+      console.log("Rendering Star Map...");
+      await this.sector.renderTemplate(html);
+    }
+    else {
+      console.log("No sector found.");  
+    }
   }
 }
 
