@@ -1,4 +1,4 @@
-import SolarSystem from "./solar-system";
+import SolarSystem from "./solar-system.mjs";
 
 export default class Sector {
   private name: string;

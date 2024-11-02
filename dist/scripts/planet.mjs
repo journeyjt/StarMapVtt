@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { generateUUID } from "./utils";
+import { generateUUID } from "./utils.mjs";
 export default class Planet {
     constructor(systemId, name, orbitSpeed, color, width, height, orbitWidth, orbitHeight) {
         this.name = name;

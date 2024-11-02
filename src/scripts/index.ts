@@ -1,4 +1,4 @@
-import { StarMap } from "./star-map";
+import { StarMap } from "./star-map.mjs";
 
 const starMap = new StarMap();
 //game.STAR_MAP = starMap;

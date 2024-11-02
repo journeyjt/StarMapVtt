@@ -7,8 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import Planet from "./planet";
-import { generateUUID, getRandomNumber, getRandomHexColor } from "./utils";
+import Planet from "./planet.mjs";
+import { generateUUID, getRandomNumber, getRandomHexColor } from "./utils.mjs";
 export default class SolarSystem {
     constructor(name, xCoordinate, yCoordinate) {
         this.name = name;
