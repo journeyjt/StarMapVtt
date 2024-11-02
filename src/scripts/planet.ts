@@ -1,6 +1,6 @@
 import { generateUUID } from "./utils.js";
 
-export class Planet {
+export default class Planet {
     private name: string;
     private orbitSpeed: number;
     private color: string;

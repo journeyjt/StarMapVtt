@@ -1,6 +1,6 @@
-import { SolarSystem } from './solar-system.js';
+import SolarSystem from "./solar-system";
 
-export class Sector {
+export default class Sector {
   private name: string;
   private description: string;
   private solarSystems: SolarSystem[];

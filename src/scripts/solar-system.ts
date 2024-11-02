@@ -1,7 +1,7 @@
-import { Planet } from "./planet.js";
+import Planet from "./planet.js";
 import { generateUUID, getRandomNumber, getRandomHexColor } from "./utils.js";
 
-export class SolarSystem {
+export default class SolarSystem {
     private name: string;
     private xCoordinate: number;
     private yCoordinate: number;
