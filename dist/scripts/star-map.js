@@ -7,12 +7,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import Sector from "./sector.js";
-import SolarSystem from "./solar-system.js";
 export default class StarMap {
     constructor() {
-        let solarSystems = [new SolarSystem("Solar System 1", 100, 100), new SolarSystem("Solar System 2", 400, 400)];
-        this.sector = new Sector("Default Sector", "This is the default sector.", solarSystems);
+        // let solarSystems = [new SolarSystem("Solar System 1", 100, 100), new SolarSystem("Solar System 2", 400, 400)];
+        // this.sector = new Sector("Default Sector", "This is the default sector.", solarSystems);
     }
     addSector(sector) {
         this.sector = sector;
@@ -60,8 +58,13 @@ export default class StarMap {
     }
     renderStarMap(app, html, data) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log("Rendering Star Map...");
-            yield this.sector.renderTemplate(html);
+            if (this.sector) {
+                console.log("Rendering Star Map...");
+                yield this.sector.renderTemplate(html);
+            }
+            else {
+                console.log("No sector found.");
+            }
         });
     }
 }
