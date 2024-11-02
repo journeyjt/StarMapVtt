@@ -60,9 +60,11 @@ class Planet {
       console.log("Rendering Planet | ", this.name);
       const content = await renderTemplate("modules/star-map/templates/star-map-planet.html", {});
       const parsedContent = content.replace("||solarSystemOrbitId||", this.id).replace("||solarSystemPlanetId||", this.name);
-      //console.log("Content | ", parsedContent);
-      const target = html.find(`#${this.systemId}`);
+      console.log("Content | ", parsedContent);
+      const target = html.find(`#${this.systemId}`).find(".module-star-map-solar-system");
       target.append(parsedContent);
+
+      
       const planet = target.find(`#${this.id}`);
       console.log("Planet | ", planet);
 
