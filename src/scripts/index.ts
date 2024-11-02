@@ -59,7 +59,7 @@ class Planet {
   async renderOrbitWithPlanet(html: any){
       console.log("Rendering Planet | ", this.name);
       const content = await renderTemplate("modules/star-map/templates/star-map-planet.html", {});
-      const parsedContent = content.replace("||solarSystemOrbitId||", this.id).replace("||solarSystemPlanetId||", this.id);
+      const parsedContent = content.replace("||solarSystemOrbitId||", this.orbitId).replace("||solarSystemPlanetId||", this.id);
       console.log("Content | ", parsedContent);
 
       const target = html.find(`#${this.systemId}`);
