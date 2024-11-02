@@ -91,6 +91,7 @@ class SolarSystem {
         this.generateRandomPlanets();
     }
     generateRandomPlanets() {
+        this.planets = [];
         let numberOfPlanets = getRandomNumber(1, 4);
         for (let i = 0; i < numberOfPlanets; i++) {
             let planetSize = getRandomNumber(8, 25);
