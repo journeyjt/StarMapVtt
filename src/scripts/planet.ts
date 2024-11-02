@@ -1,4 +1,4 @@
-import { generateUUID } from "./utils";
+import { generateUUID } from "./utils.js";
 
 export class Planet {
     private name: string;

@@ -1,4 +1,4 @@
-import { SolarSystem } from './solar-system'; // Assuming the SolarSystem class is defined in a separate file called 'solarSystem.ts'
+import { SolarSystem } from './solar-system.js';
 
 export class Sector {
   private name: string;
