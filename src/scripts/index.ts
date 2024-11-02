@@ -72,7 +72,7 @@ class Planet {
 
       planet.css({
           width: `${this.width}px`,
-          height: `${this.height}}px`, 
+          height: `${this.height}px`, 
           background: `${this.color}`,
           position: `absolute`,
           top: `10%`
