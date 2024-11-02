@@ -55,7 +55,7 @@ class Planet {
         return __awaiter(this, void 0, void 0, function* () {
             console.log("Rendering Planet | ", this.name);
             const content = yield renderTemplate("modules/star-map/templates/star-map-planet.html", {});
-            const parsedContent = content.replace("||solarSystemOrbitId||", this.id).replace("||solarSystemPlanetId||", this.id);
+            const parsedContent = content.replace("||solarSystemOrbitId||", this.orbitId).replace("||solarSystemPlanetId||", this.id);
             console.log("Content | ", parsedContent);
             const target = html.find(`#${this.systemId}`);
             console.log("Target Solar System | ", target);
