@@ -8,21 +8,20 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import Planet from "./planet.js";
-import { generateUUID, getRandomNumber, getRandomHexColor } from "./utils.js";
 export default class SolarSystem {
     constructor(name, xCoordinate, yCoordinate) {
         this.name = name;
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
-        this.id = generateUUID();
+        this.id = window.generateUUID();
         this.generateRandomPlanets();
     }
     generateRandomPlanets() {
-        let numberOfPlanets = getRandomNumber(1, 4);
+        let numberOfPlanets = window.getRandomNumber(1, 4);
         for (let i = 0; i < numberOfPlanets; i++) {
-            let planetSize = getRandomNumber(8, 25);
-            let orbitSize = getRandomNumber(35, 200) + (i * 10);
-            let planet = new Planet(this.id, `Planet ${i + 1}`, getRandomNumber(10, 20), getRandomHexColor(), planetSize, planetSize, orbitSize, orbitSize);
+            let planetSize = window.getRandomNumber(8, 25);
+            let orbitSize = window.getRandomNumber(35, 200) + (i * 10);
+            let planet = new Planet(this.id, `Planet ${i + 1}`, window.getRandomNumber(10, 20), window.getRandomHexColor(), planetSize, planetSize, orbitSize, orbitSize);
             this.planets.push(planet);
         }
     }

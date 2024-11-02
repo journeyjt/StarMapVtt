@@ -1,4 +1,3 @@
-import { generateUUID } from "./utils.js";
 
 export default class Planet {
     private name: string;
@@ -15,8 +14,8 @@ export default class Planet {
     constructor(systemId: string, name: string, orbitSpeed: number, color: string, width: number, height: number, orbitWidth: number, orbitHeight: number) {
         this.name = name;
         this.orbitSpeed = orbitSpeed;
-        this.id = generateUUID();
-        this.orbitId = generateUUID();
+        this.id = window.generateUUID();
+        this.orbitId = window.generateUUID();
         this.systemId = systemId;
         this.color = color;
         this.width = width;
