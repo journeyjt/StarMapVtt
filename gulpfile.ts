@@ -7,7 +7,6 @@ const project = ts.createProject('./tsconfig.json')
 gulp.task('compile', () => {
   return gulp.src('src/**/*.ts')
     .pipe(project())
-    .pipe(rename({ extname: '.mjs' }))
     .pipe(gulp.dest('dist/'))
 })
 
