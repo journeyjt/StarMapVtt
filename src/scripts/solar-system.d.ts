@@ -1,4 +1,4 @@
-import Planet from "./planet";
+import Planet from "planet";
 import { generateUUID, getRandomNumber, getRandomHexColor } from "./utils";
 
 declare module "./solar-system" {
