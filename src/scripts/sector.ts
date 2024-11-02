@@ -1,4 +1,5 @@
 import SolarSystem from "./solar-system";
+
 export default class Sector {
   private name: string;
   private description: string;

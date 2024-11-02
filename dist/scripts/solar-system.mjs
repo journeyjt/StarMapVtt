@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import Planet from "./planet";
-import { generateUUID, getRandomHexColor, getRandomNumber } from "./utils";
+import { generateUUID, getRandomNumber, getRandomHexColor } from "./utils";
 export default class SolarSystem {
     constructor(name, xCoordinate, yCoordinate) {
         this.name = name;

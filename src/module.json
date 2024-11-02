@@ -43,6 +43,7 @@
     }
   ],
   "scripts": [
+
   ],
   "esmodules": [
     "scripts/star-map.mjs",
