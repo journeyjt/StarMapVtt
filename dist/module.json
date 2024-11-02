@@ -43,6 +43,12 @@
     }
   ],
   "scripts": [
+    "scripts/star-map.mjs",
+    "scripts/sector.mjs",
+    "scripts/index.mjs",
+    "scripts/solar-system.mjs",
+    "scripts/planet.mjs",
+    "scripts/utils.mjs"
   ],
   "esmodules": [
     "scripts/star-map.mjs",

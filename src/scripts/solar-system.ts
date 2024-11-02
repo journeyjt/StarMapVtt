@@ -1,5 +1,6 @@
 import Planet from "./planet";
-import { generateUUID, getRandomHexColor, getRandomNumber } from "./utils";
+import { generateUUID, getRandomNumber, getRandomHexColor } from "./utils";
+
 
 export default class SolarSystem {
     private name: string;
