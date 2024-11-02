@@ -37,15 +37,15 @@ class Planet {
 
   constructor(systemId: string, name: string, orbitSpeed: number, color: string, width: number, height: number, orbitWidth: number, orbitHeight: number) {
       this.name = name;
-      this.orbitSpeed = orbitSpeed;
+      this.orbitSpeed = orbitSpeed ? orbitSpeed : 20;
       this.id = generateUUID();
       this.orbitId = `${this.id}-orbit`;
       this.systemId = systemId;
-      this.color = color;
-      this.width = width;
-      this.height = height;
-      this.orbitWidth = orbitWidth;
-      this.orbitHeight = orbitHeight;
+      this.color = color ? color : getRandomHexColor();
+      this.width = width ? width : 10;
+      this.height = height ? height : 10;
+      this.orbitWidth = orbitWidth ? orbitWidth : 50;
+      this.orbitHeight = orbitHeight ? orbitHeight : 50;
   }
 
   getName(): string {
