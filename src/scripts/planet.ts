@@ -14,14 +14,39 @@ export default class Planet {
     constructor(systemId: string, name: string, orbitSpeed: number, color: string, width: number, height: number, orbitWidth: number, orbitHeight: number) {
         this.name = name;
         this.orbitSpeed = orbitSpeed;
-        this.id = window.generateUUID();
-        this.orbitId = window.generateUUID();
+        this.id = this.generateUUID();
+        this.orbitId = this.generateUUID();
         this.systemId = systemId;
         this.color = color;
         this.width = width;
         this.height = height;
         this.orbitWidth = orbitWidth;
         this.orbitHeight = orbitHeight;
+    }
+
+    generateUUID(): string { // Public Domain/MIT
+        let d = new Date().getTime();//Timestamp
+        let d2 = (typeof performance !== 'undefined' && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          let r = Math.random() * 16;//random number between 0 and 15
+          if(d > 0){//Use timestamp until depleted
+            r = (d + r)%16 | 0;
+            d = Math.floor(d/16);
+          } else {//Use microseconds since page-load if supported
+            r = (d2 + r)%16 | 0;
+            d2 = Math.floor(d2/16);
+          }
+          return (c==='x' ? r : (r&0x3|0x8)).toString(16);
+        });
+    }
+    
+    getRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    
+    getRandomHexColor() {
+        let hex = Math.floor(Math.random() * 16777215).toString(16);
+        return `#${hex.padStart(6, '0')}`;
     }
 
     getName(): string {
