@@ -27,8 +27,11 @@ export default class SolarSystem {
         solarSystem.click(() => {
             console.log(`Clicked on ${this.name} x: ${this.xCoordinate} y: ${this.yCoordinate}`)
         });
-        solarSystem.style.left = `${this.xCoordinate}px`;
-        solarSystem.style.top = `${this.yCoordinate}px`;
+        solarSystem.css({
+          position: 'absolute',
+          left: `${this.xCoordinate}px`,
+          top: `${this.yCoordinate}px`
+      });      
         console.log("Solar System | ", solarSystem);
     }
 
