@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { StarMap } from "./star-map.js";
+import StarMap from "./star-map";
 const starMap = new StarMap();
 //game.STAR_MAP = starMap;
 Hooks.once('init', function () {

@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { generateUUID } from "./utils.js";
-export class Planet {
+export default class Planet {
     constructor(systemId, name, orbitSpeed, color, width, height, orbitWidth, orbitHeight) {
         this.name = name;
         this.orbitSpeed = orbitSpeed;
