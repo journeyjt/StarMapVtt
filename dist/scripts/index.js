@@ -33,15 +33,15 @@ function getRandomHexColor() {
 class Planet {
     constructor(systemId, name, orbitSpeed, color, width, height, orbitWidth, orbitHeight) {
         this.name = name;
-        this.orbitSpeed = orbitSpeed;
+        this.orbitSpeed = orbitSpeed ? orbitSpeed : 20;
         this.id = generateUUID();
         this.orbitId = `${this.id}-orbit`;
         this.systemId = systemId;
-        this.color = color;
-        this.width = width;
-        this.height = height;
-        this.orbitWidth = orbitWidth;
-        this.orbitHeight = orbitHeight;
+        this.color = color ? color : getRandomHexColor();
+        this.width = width ? width : 10;
+        this.height = height ? height : 10;
+        this.orbitWidth = orbitWidth ? orbitWidth : 50;
+        this.orbitHeight = orbitHeight ? orbitHeight : 50;
     }
     getName() {
         return this.name;
