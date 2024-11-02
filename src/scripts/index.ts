@@ -39,7 +39,7 @@ class Planet {
       this.name = name;
       this.orbitSpeed = orbitSpeed;
       this.id = generateUUID();
-      this.orbitId = generateUUID();
+      this.orbitId = `${this.id}-orbit`;
       this.systemId = systemId;
       this.color = color;
       this.width = width;
