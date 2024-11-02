@@ -1,5 +1,5 @@
-import Planet from "./planet";
-import { generateUUID, getRandomNumber, getRandomHexColor } from "./utils";
+import Planet from "./planet.mjs";
+import { generateUUID, getRandomNumber, getRandomHexColor } from "./utils.mjs";
 
 
 export default class SolarSystem {

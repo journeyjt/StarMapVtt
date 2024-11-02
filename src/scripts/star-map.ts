@@ -1,5 +1,5 @@
-import Sector from "./sector";
-import SolarSystem from "./solar-system";
+import Sector from "./sector.mjs";
+import SolarSystem from "./solar-system.mjs";
 
 export class StarMap {
   private sector: Sector;
