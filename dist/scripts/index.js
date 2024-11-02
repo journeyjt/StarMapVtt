@@ -113,8 +113,8 @@ class SolarSystem {
             //console.log("Content | ", parsedContent);
             const target = html.find("#star-map");
             target.append(parsedContent);
-            const solarSystem = target.find(`#${this.id}`);
-            console.log("Solar System | ", solarSystem);
+            const solarSystem = target.find(`#${this.anchorId}`);
+            //console.log("Solar System | ", solarSystem);
             solarSystem.css({
                 position: 'absolute',
                 left: `${this.xCoordinate}px`,
@@ -122,7 +122,7 @@ class SolarSystem {
             });
             console.log("Solar System | ", solarSystem);
             this.planets.forEach((planet) => __awaiter(this, void 0, void 0, function* () {
-                yield planet.renderTemplate(solarSystem);
+                yield planet.renderTemplate(html);
             }));
         });
     }
