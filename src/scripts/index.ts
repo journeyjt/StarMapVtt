@@ -44,8 +44,8 @@ class Planet {
       this.color = color ? color : getRandomHexColor();
       this.width = width ? width : 10;
       this.height = height ? height : 10;
-      this.orbitWidth = orbitWidth ? orbitWidth : 50;
-      this.orbitHeight = orbitHeight ? orbitHeight : 50;
+      this.orbitWidth = orbitWidth ? orbitWidth : 100;
+      this.orbitHeight = orbitHeight ? orbitHeight : 100;
   }
 
   getName(): string {
@@ -114,7 +114,7 @@ class SolarSystem {
       this.planets = [];
       let numberOfPlanets = getRandomNumber(1, 4);
       for (let i = 0; i < numberOfPlanets; i++) {
-          let planetSize = getRandomNumber(8, 25);
+          let planetSize = getRandomNumber(8, 18);
           let orbitSize = getRandomNumber(35, 200) +  (i * 10);
           let planet = new Planet(this.id, `Planet ${i + 1}`, getRandomNumber(10, 20), getRandomHexColor(), planetSize, planetSize, orbitSize, orbitSize);
           this.planets.push(planet);
