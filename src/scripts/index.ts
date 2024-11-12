@@ -243,11 +243,11 @@ class StarMap {
 
   async renderStarMap(app: any, html: any, data: any) {
     
-    let loadedData = await this.loadDataFromFile("../data/star-map.json", (err, data) => {});
+    // let loadedData = this.loadDataFromFile("../data/star-map.json", (err, data) => {});
     
-    if(loadedData != null){
-      this.sector = loadedData as Sector;
-    }
+    // if(loadedData != null){
+    //   this.sector = loadedData as Sector;
+    // }
 
     if(this.sector){  
       console.log("Rendering Star Map...");
@@ -261,8 +261,13 @@ class StarMap {
 
   saveStarMap() {
     console.log("Saving Star Map...");
-    var jsonString = JSON.stringify(this.sector);
-    fs.writeFileSync("../data/star-map.json", jsonString, "utf8");
+    try{
+      var jsonString = JSON.stringify(this.sector);
+      fs.writeFileSync("../data/star-map.json", jsonString, "utf8");
+    }
+    catch(err){
+      console.error("Error saving Star Map | ", err);
+    }
   }
 
   loadDataFromFile(filePath, callback) { 
