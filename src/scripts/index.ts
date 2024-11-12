@@ -1,3 +1,6 @@
+import fs from 'fs';
+
+
 function generateUUID(): string { // Public Domain/MIT
   let d: number = new Date().getTime();//Timestamp
   let d2: number = (typeof performance !== 'undefined' && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
@@ -208,8 +211,6 @@ class StarMap {
 
   async initStarMap(canvas) {
     console.log("Initializing Star Map...");
-    //console.log("Canvas | ", canvas);
-    //console.log("Scene | ", canvas.scene);
 
     let scene: Scene | undefined = game.scenes.find(scene => scene.name === "StarMap");
     if (!scene) {
@@ -241,13 +242,51 @@ class StarMap {
   }
 
   async renderStarMap(app: any, html: any, data: any) {
+    
+    let loadedData = await this.loadDataFromFile("../data/star-map.json", (err, data) => {});
+    
+    if(loadedData != null){
+      this.sector = loadedData as Sector;
+    }
+
     if(this.sector){  
       console.log("Rendering Star Map...");
       await this.sector.renderTemplate(html);
+      this.saveStarMap();
     }
     else {
       console.log("No sector found.");  
     }
+  }
+
+  saveStarMap() {
+    console.log("Saving Star Map...");
+    var jsonString = JSON.stringify(this.sector);
+    fs.writeFileSync("../data/star-map.json", jsonString, "utf8");
+  }
+
+  loadDataFromFile(filePath, callback) { 
+    fs.readFile(filePath, 'utf8', (err, data) => 
+      { 
+        if (err) 
+        { 
+          console.error('Error reading from file:', err); 
+          callback(err, null); 
+        } 
+        else 
+        { 
+          try 
+          { 
+            const jsonData = JSON.parse(data); 
+            callback(null, jsonData); 
+          } 
+          catch (parseErr) 
+          { 
+            console.error('Error parsing JSON data:', parseErr); 
+            callback(parseErr, null); 
+          } 
+        } 
+      });
   }
 }
 
