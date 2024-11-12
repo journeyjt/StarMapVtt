@@ -252,7 +252,7 @@ class StarMap {
     if(this.sector){  
       console.log("Rendering Star Map...");
       await this.sector.renderTemplate(html);
-      this.saveStarMap();
+      //this.saveStarMap();
     }
     else {
       console.log("No sector found.");  
