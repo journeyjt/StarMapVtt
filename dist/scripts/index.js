@@ -204,10 +204,10 @@ class StarMap {
     }
     renderStarMap(app, html, data) {
         return __awaiter(this, void 0, void 0, function* () {
-            let loadedData = yield this.loadDataFromFile("../data/star-map.json", (err, data) => { });
-            if (loadedData != null) {
-                this.sector = loadedData;
-            }
+            // let loadedData = this.loadDataFromFile("../data/star-map.json", (err, data) => {});
+            // if(loadedData != null){
+            //   this.sector = loadedData as Sector;
+            // }
             if (this.sector) {
                 console.log("Rendering Star Map...");
                 yield this.sector.renderTemplate(html);
@@ -220,8 +220,13 @@ class StarMap {
     }
     saveStarMap() {
         console.log("Saving Star Map...");
-        var jsonString = JSON.stringify(this.sector);
-        fs.writeFileSync("../data/star-map.json", jsonString, "utf8");
+        try {
+            var jsonString = JSON.stringify(this.sector);
+            fs.writeFileSync("../data/star-map.json", jsonString, "utf8");
+        }
+        catch (err) {
+            console.error("Error saving Star Map | ", err);
+        }
     }
     loadDataFromFile(filePath, callback) {
         fs.readFile(filePath, 'utf8', (err, data) => {
