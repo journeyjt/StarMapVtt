@@ -43,9 +43,10 @@
     }
   ],
   "scripts": [
-    "scripts/index.js"
+    "scripts/index.mjs"
   ],
   "esmodules": [
+    "scripts/index.mjs"
   ],
   "styles": [
     "styles/module.css"
