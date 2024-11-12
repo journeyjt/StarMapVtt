@@ -7,6 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+import fs from 'fs';
 function generateUUID() {
     let d = new Date().getTime(); //Timestamp
     let d2 = (typeof performance !== 'undefined' && performance.now && (performance.now() * 1000)) || 0; //Time in microseconds since page-load or 0 if unsupported
@@ -174,8 +175,6 @@ class StarMap {
     initStarMap(canvas) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log("Initializing Star Map...");
-            //console.log("Canvas | ", canvas);
-            //console.log("Scene | ", canvas.scene);
             let scene = game.scenes.find(scene => scene.name === "StarMap");
             if (!scene) {
                 console.log("Creating StarMap scene");
@@ -205,12 +204,40 @@ class StarMap {
     }
     renderStarMap(app, html, data) {
         return __awaiter(this, void 0, void 0, function* () {
+            let loadedData = yield this.loadDataFromFile("../data/star-map.json", (err, data) => { });
+            if (loadedData != null) {
+                this.sector = loadedData;
+            }
             if (this.sector) {
                 console.log("Rendering Star Map...");
                 yield this.sector.renderTemplate(html);
+                this.saveStarMap();
             }
             else {
                 console.log("No sector found.");
+            }
+        });
+    }
+    saveStarMap() {
+        console.log("Saving Star Map...");
+        var jsonString = JSON.stringify(this.sector);
+        fs.writeFileSync("../data/star-map.json", jsonString, "utf8");
+    }
+    loadDataFromFile(filePath, callback) {
+        fs.readFile(filePath, 'utf8', (err, data) => {
+            if (err) {
+                console.error('Error reading from file:', err);
+                callback(err, null);
+            }
+            else {
+                try {
+                    const jsonData = JSON.parse(data);
+                    callback(null, jsonData);
+                }
+                catch (parseErr) {
+                    console.error('Error parsing JSON data:', parseErr);
+                    callback(parseErr, null);
+                }
             }
         });
     }
