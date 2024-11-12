@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+// import * as fs from 'fs';
 
 function generateUUID(): string { // Public Domain/MIT
   let d: number = new Date().getTime();//Timestamp
@@ -258,41 +258,41 @@ class StarMap {
     }
   }
 
-  saveStarMap() {
-    console.log("Saving Star Map...");
-    try{
-      var jsonString = JSON.stringify(this.sector);
-      fs.writeFileSync("../data/star-map.json", jsonString, "utf8");
-    }
-    catch(err){
-      console.error("Error saving Star Map | ", err);
-    }
-  }
+//   saveStarMap() {
+//     console.log("Saving Star Map...");
+//     try{
+//       var jsonString = JSON.stringify(this.sector);
+//       fs.writeFileSync("../data/star-map.json", jsonString, "utf8");
+//     }
+//     catch(err){
+//       console.error("Error saving Star Map | ", err);
+//     }
+//   }
 
-  loadDataFromFile(filePath, callback) { 
-    fs.readFile(filePath, 'utf8', (err, data) => 
-      { 
-        if (err) 
-        { 
-          console.error('Error reading from file:', err); 
-          callback(err, null); 
-        } 
-        else 
-        { 
-          try 
-          { 
-            const jsonData = JSON.parse(data); 
-            callback(null, jsonData); 
-          } 
-          catch (parseErr) 
-          { 
-            console.error('Error parsing JSON data:', parseErr); 
-            callback(parseErr, null); 
-          } 
-        } 
-      });
-  }
-}
+//   loadDataFromFile(filePath, callback) { 
+//     fs.readFile(filePath, 'utf8', (err, data) => 
+//       { 
+//         if (err) 
+//         { 
+//           console.error('Error reading from file:', err); 
+//           callback(err, null); 
+//         } 
+//         else 
+//         { 
+//           try 
+//           { 
+//             const jsonData = JSON.parse(data); 
+//             callback(null, jsonData); 
+//           } 
+//           catch (parseErr) 
+//           { 
+//             console.error('Error parsing JSON data:', parseErr); 
+//             callback(parseErr, null); 
+//           } 
+//         } 
+//       });
+//   }
+// }
 
 const starMap = new StarMap();
 
