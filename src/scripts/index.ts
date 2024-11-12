@@ -1,5 +1,4 @@
-import fs from 'fs';
-
+import * as fs from 'fs';
 
 function generateUUID(): string { // Public Domain/MIT
   let d: number = new Date().getTime();//Timestamp
@@ -294,7 +293,6 @@ class StarMap {
       });
   }
 }
-
 
 const starMap = new StarMap();
 
