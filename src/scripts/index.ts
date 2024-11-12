@@ -294,6 +294,7 @@ class StarMap {
 //   }
 // }
 
+}
 const starMap = new StarMap();
 
 Hooks.once('init', async function () {

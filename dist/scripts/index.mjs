@@ -157,41 +157,6 @@ class Sector {
 }
 class StarMap {
     constructor() {
-        //   saveStarMap() {
-        //     console.log("Saving Star Map...");
-        //     try{
-        //       var jsonString = JSON.stringify(this.sector);
-        //       fs.writeFileSync("../data/star-map.json", jsonString, "utf8");
-        //     }
-        //     catch(err){
-        //       console.error("Error saving Star Map | ", err);
-        //     }
-        //   }
-        //   loadDataFromFile(filePath, callback) { 
-        //     fs.readFile(filePath, 'utf8', (err, data) => 
-        //       { 
-        //         if (err) 
-        //         { 
-        //           console.error('Error reading from file:', err); 
-        //           callback(err, null); 
-        //         } 
-        //         else 
-        //         { 
-        //           try 
-        //           { 
-        //             const jsonData = JSON.parse(data); 
-        //             callback(null, jsonData); 
-        //           } 
-        //           catch (parseErr) 
-        //           { 
-        //             console.error('Error parsing JSON data:', parseErr); 
-        //             callback(parseErr, null); 
-        //           } 
-        //         } 
-        //       });
-        //   }
-        // }
-        this.starMap = new StarMap();
         let solarSystems = [new SolarSystem("Solar System 1", 100, 100), new SolarSystem("Solar System 2", 400, 400)];
         this.sector = new Sector("Default Sector", "This is the default sector.", solarSystems);
     }
@@ -253,8 +218,10 @@ class StarMap {
             }
         });
     }
-    once(, ) { }
-    function() {
+}
+const starMap = new StarMap();
+Hooks.once('init', function () {
+    return __awaiter(this, void 0, void 0, function* () {
         CONFIG.debug.hooks = true;
         Hooks.on("canvasReady", starMap.initStarMap);
         console.log("Star Map | Ready");
@@ -263,6 +230,5 @@ class StarMap {
                 yield starMap.renderStarMap(app, html, data);
             }
         }));
-    }
-    ;
-}
+    });
+});
